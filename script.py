@@ -1113,7 +1113,7 @@ if generate_oracle_db_output:
                 insert_cols.append(f"\"{key_upper}_{str(i).zfill(2)}\"")
                 insert_placeholders.append(f":{key_lower}_{str(i).zfill(2)}")
 
-    insert_sql = f""" INSERT INTO {SCHEMA}.{TABLE_NAME} ({', '.join(insert_cols)}) VALUES ({', '.join(insert_placeholders)}) """
+    insert_sql = f""" INSERT INTO {ORACLE_SCHEMA}.{ORACLE_TABLE_NAME} ({', '.join(insert_cols)}) VALUES ({', '.join(insert_placeholders)}) """
 
     # --- 4000 uzeri kolonlar icin parcalama ---
     processed_data = []
